@@ -3,6 +3,11 @@ import type { MetaFunction } from '@remix-run/node';
 import { Link as RemixLink } from '@remix-run/react';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import SearchIcon from '@mui/icons-material/Search';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
+
 
 // https://remix.run/docs/en/main/route/meta
 export const meta: MetaFunction = () => [
@@ -14,6 +19,11 @@ export const meta: MetaFunction = () => [
 export default function Index() {
   return (
     <React.Fragment>
+      <SearchIcon />
+      <NotificationsNoneIcon />
+      <ChatBubbleOutlineOutlinedIcon />
+      <ModeCommentOutlinedIcon className='ml-10' />
+
       <Typography variant="h4" component="h1" gutterBottom>
         Material UI Remix in TypeScript example
       </Typography>

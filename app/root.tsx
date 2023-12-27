@@ -14,12 +14,17 @@ import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
 import theme from './src/theme';
 import ClientStyleContext from './src/ClientStyleContext';
 import Layout from './src/Layout';
+import stylesheet from "./tailwind.css";
+import type { LinksFunction } from "@remix-run/node";
 
 interface DocumentProps {
   children: React.ReactNode;
   title?: string;
 }
 
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
+];
 const Document = withEmotionCache(({ children, title }: DocumentProps, emotionCache) => {
   const clientStyleData = React.useContext(ClientStyleContext);
 
