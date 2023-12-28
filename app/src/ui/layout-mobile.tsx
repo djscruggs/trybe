@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-
+import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
@@ -29,11 +29,19 @@ export default function LayoutMobile({ children }: { children: React.ReactNode }
                   {children}
               </div>
               <div className="flex justify-between">
+                <Link to="/" >
                   <HomeOutlinedIcon fontSize="large" className='cursor-pointer' />
+                </Link>
+                <Link to="/challenges" >
                   <EmojiEventsOutlinedIcon fontSize="large" className='cursor-pointer' />
+                </Link>
                   <AddCircleOutlinedIcon fontSize="large" className='cursor-pointer' />
+                <Link to="/groups" >
                   <PeopleOutlineOutlinedIcon fontSize='large' className='cursor-pointer' />
+                </Link>
+                <Link to="/profile" >
                   <PortraitOutlinedIcon fontSize='large' className='cursor-pointer' />
+                </Link>
               </div>
           </div>
       </Box>
