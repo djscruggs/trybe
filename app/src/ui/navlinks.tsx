@@ -8,6 +8,7 @@ import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
 import PortraitOutlinedIcon from '@mui/icons-material/PortraitOutlined';
+import {theme} from './theme';
 
 // ... (Icons and other imports)
 
@@ -22,6 +23,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isAuthenticated = true }) => {
     // logout();
     document.location = "/";
   }
+  console.log(theme)
   
   
 

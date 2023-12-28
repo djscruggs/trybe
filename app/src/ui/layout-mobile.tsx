@@ -11,11 +11,11 @@ import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
 import PeopleOutlineOutlinedIcon from '@mui/icons-material/PeopleOutlineOutlined';
 import PortraitOutlinedIcon from '@mui/icons-material/PortraitOutlined';
 
-
+import {theme} from './theme';
 
 export default function LayoutMobile({ children }: { children: React.ReactNode }) {
   
-  
+  const btnColor = theme.palette.primary.main;
   return (
       <Container maxWidth="sm" className='h-screen'>
       <Box sx={{ my: 0 }} className="h-full">
@@ -28,14 +28,16 @@ export default function LayoutMobile({ children }: { children: React.ReactNode }
               <div className="flex flex-col items-center">
                   {children}
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between border border-1 border-red">
                 <Link to="/" >
                   <HomeOutlinedIcon fontSize="large" className='cursor-pointer' />
                 </Link>
                 <Link to="/challenges" >
                   <EmojiEventsOutlinedIcon fontSize="large" className='cursor-pointer' />
                 </Link>
-                  <AddCircleOutlinedIcon fontSize="large" className='cursor-pointer' />
+                <Link to="/new" className="-mt-6">
+                  <AddCircleOutlinedIcon style={{ fontSize: '3rem', color: `${btnColor}` }} className='color-main cursor-pointer text-6xl' />
+                </Link>
                 <Link to="/groups" >
                   <PeopleOutlineOutlinedIcon fontSize='large' className='cursor-pointer' />
                 </Link>
