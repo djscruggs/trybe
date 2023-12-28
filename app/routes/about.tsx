@@ -7,11 +7,9 @@ export default function About() {
   return (
     <React.Fragment>
       <Typography variant="h4" component="h1" gutterBottom>
-        Material UI Remix in TypeScript example
+        I am About
       </Typography>
-      <Button variant="contained" component={Link} to="/">
-        Go to the main page
-      </Button>
+      
     </React.Fragment>
   );
 }

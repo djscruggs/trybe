@@ -1,7 +1,10 @@
+import Typography from '@mui/material/Typography';
 export default function Messages({ children }: { children: React.ReactNode }) {
   return  (
             <>
-              <h1>I am Messages</h1>
+              <Typography variant="h4" component="h1" gutterBottom>
+                I am Messages
+              </Typography>
             </>
           )
   }

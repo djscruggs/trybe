@@ -1,7 +1,10 @@
+import Typography from '@mui/material/Typography';
 export default function Groups({ children }: { children: React.ReactNode }) {
   return  (
             <>
-              <h1>I am Groups</h1>
+             <Typography variant="h4" component="h1" gutterBottom>
+                I am Groups
+              </Typography>
             </>
           )
   }

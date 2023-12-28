@@ -18,9 +18,7 @@ export default function Index() {
       <Typography variant="h4" component="h1" gutterBottom>
         Trybe home screen.
       </Typography>
-      <Link to="/about" color="secondary" component={RemixLink}>
-        Go to the about page
-      </Link>
+      
     </React.Fragment>
   );
 }
