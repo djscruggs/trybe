@@ -13,7 +13,7 @@ import { withEmotionCache } from '@emotion/react';
 import { unstable_useEnhancedEffect as useEnhancedEffect } from '@mui/material';
 import {theme} from './src/ui/theme';
 import ClientStyleContext from './src/ClientStyleContext';
-import Layout from './src/ui/Layout';
+import Layout from './src/ui/layout';
 import stylesheet from "./tailwind.css";
 import type { LinksFunction } from "@remix-run/node";
 
