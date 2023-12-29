@@ -46,11 +46,11 @@ export default function LayoutMobile({ children }: { children: React.ReactNode }
                 <div className="flex flex-col items-center">
                     <AnimatePresence mode='wait' initial={false}>
                         <motion.main
-                        key={useLocation().pathname}
-                        initial={{x: '-10%', opacity: 0}}
-                        animate={{x: '0', opacity: 1}}
-                        exit={{y: '-10%', opacity: 0}}
-                        transition={{duration: 0.3}}
+                         key={useLocation().pathname}
+                         initial={{opacity: 0}}
+                         animate={{opacity: 1}}
+                         // exit={{opacity: 0}}
+                         transition={{duration: 0.3}}
                         >
                         {children}
                         </motion.main>
@@ -76,15 +76,15 @@ export default function LayoutMobile({ children }: { children: React.ReactNode }
                             transition={{duration: 0.4}}
                             >
                             <div className="flex absolute top-[-100px] left-1/2 transform -translate-x-1/2">
-                               <div onClick={(event) => handleNewOpt('/groups/new', event)} className="flex flex-col items-center justify-center w-20 h-20 rounded-full bg-yellow-400 mx-2 cursor-pointer">
+                               <div onClick={(event) => handleNewOpt('/groups/new', event)} className="flex flex-col items-center justify-center w-20 h-20 rounded-full bg-[#FDC94C] mx-2 cursor-pointer">
                                     <PeopleOutlineOutlinedIcon fontSize='large' />
                                     <span className="cursor-pointer text-xs">Group</span>
                                 </div>
-                                <div onClick={(event) => handleNewOpt('/posts/new', event)} className="flex flex-col items-center justify-center w-20 h-20  rounded-full bg-yellow-400 mx-2  cursor-pointer" style={{ marginTop: '-24px' }}>
+                                <div onClick={(event) => handleNewOpt('/posts/new', event)} className="flex flex-col items-center justify-center w-20 h-20  rounded-full bg-[#FDC94C] mx-2  cursor-pointer" style={{ marginTop: '-24px' }}>
                                     <AddCommentOutlinedIcon fontSize="large" className='-scale-x-100' />
                                     <span className="cursor-pointer text-xs">Post</span>
                                 </div>
-                                <div onClick={(event) => handleNewOpt('/challenges/new', event)} className="flex flex-col items-center justify-center w-20 h-20  rounded-full bg-yellow-400 mx-2 cursor-pointer">
+                                <div onClick={(event) => handleNewOpt('/challenges/new', event)} className="flex flex-col items-center justify-center w-20 h-20  rounded-full bg-[#FDC94C] mx-2 cursor-pointer">
                                     <EmojiEventsOutlinedIcon fontSize="large"  />
                                     <span className="cursor-pointer text-xs mt-0">Challenge</span>
                                 </div>
