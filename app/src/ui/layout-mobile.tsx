@@ -30,10 +30,7 @@ export default function LayoutMobile({ children }: { children: React.ReactNode }
   }
   const nav = useNavigate()
   const handleNewOpt = (action: string, event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    console.log('handleNewOpt')
-    console.log(action)
-    event.stopPropagation(); // Prevents the event from bubbling up to the parent
-    
+    event.stopPropagation();
     nav(action)
     hideMenu();
   };
