@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { useLocation } from 'react-router-dom';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import { CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material';
 import {theme} from './theme';
 import NavLinks from './navlinks';
+import {AnimatePresence, motion} from 'framer-motion'
 
 
 
@@ -25,7 +27,17 @@ export default function LayoutWeb({ children }: { children: React.ReactNode }) {
                   
                 </div>
                 <div className="flex-grow pt-4">
-                {children}
+                  <AnimatePresence mode='wait' initial={false}>
+                      <motion.main
+                      key={useLocation().pathname}
+                      initial={{opacity: 0}}
+                      animate={{opacity: 1}}
+                      // exit={{opacity: 0}}
+                      transition={{duration: 0.3}}
+                      >
+                      {children}
+                      </motion.main>
+                  </AnimatePresence>
                 </div>
           </div>
         </Box>
